@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mincolor: #fed72b;
+    --secondcolor: #fe9711;
+    --thirdcolor: #fee53a;
+}
+
+.app {
+    background-color: #45277B;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.duck {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    border: 1px solid white;
+}
+
+.body-duck {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-color: var(--mincolor);
+}
+
+.body-duck::before {
+    content: "";
+    /* top: 140px; */
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    box-shadow: 80px 45px 0 var(--secondcolor);
+    transform: rotate(30deg);
+    border-radius: 50%;
+    top: -5px;
+    left:10px ;
+    background-color: rgba(255, 255, 255, 0);
+    /* border-radius: 50%; */
+    /* background-color: var(--mincolor); */
+}
+.body-duck::after{
+    content:"";
+    position: absolute;
+    height: 130px;
+    width: 220px;
+    top: 140px;
+    border-radius: 70px ;
+    background-color: var(--mincolor);
+}
+.body-duck .feather{
+    top: 120px;
+    left: 80px;
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 110px;
+    background-color: var(--thirdcolor);
+    z-index: 1;
+    border-radius:31% 69% /50% 100% 0 50%;
+}
