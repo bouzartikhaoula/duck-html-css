@@ -11,7 +11,7 @@
 }
 
 .app {
-    background-color: #45277B;
+    background-color: #0d2510;
     height: 100vh;
     width: 100vw;
     display: grid;
@@ -22,7 +22,6 @@
     width: 500px;
     height: 500px;
     position: relative;
-    border: 1px solid white;
 }
 
 .body-duck {
@@ -45,21 +44,23 @@
     transform: rotate(30deg);
     border-radius: 50%;
     top: -5px;
-    left:10px ;
+    left: 10px;
     background-color: rgba(255, 255, 255, 0);
     /* border-radius: 50%; */
     /* background-color: var(--mincolor); */
 }
-.body-duck::after{
-    content:"";
+
+.body-duck::after {
+    content: "";
     position: absolute;
     height: 130px;
     width: 220px;
     top: 140px;
-    border-radius: 70px ;
+    border-radius: 70px;
     background-color: var(--mincolor);
 }
-.body-duck .feather{
+
+.body-duck .feather {
     top: 120px;
     left: 80px;
     content: "";
@@ -68,5 +69,58 @@
     height: 110px;
     background-color: var(--thirdcolor);
     z-index: 1;
-    border-radius:31% 69% /50% 100% 0 50%;
+    border-radius: 31% 69% /50% 100% 0 50%;
+}
+
+.body-duck .feather:before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 25px;
+    border-radius: 0 5px 25px 0;
+    top: -120px;
+    background-color: var(--mincolor);
+
+}
+
+.eye {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 70px;
+    top: 60px;
+    box-shadow: 0 0 0 12px white;
+    border-radius: 50%;
+    background-color: black;
+}
+
+
+.front {
+    position: absolute;
+    top: -29px;
+    left: -10px;
+    border-radius: 30%;
+    width: 40px;
+    height: 10px;
+    background-color: var(--thirdcolor);
+}
+
+.beak {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background-color: var(--secondcolor);
+    top: 70px;
+    left: -40px;
+    border-radius: 20px 0 0 0;
+}
+
+.beak::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 30px;
+    background-color: var(--secondcolor);
+    top: -25px;
+    border-radius: 0 50%;
 }
